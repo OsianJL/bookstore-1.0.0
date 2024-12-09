@@ -1,10 +1,16 @@
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import BooksPage from "./pages/BooksPage";
+
 function App() {
   return (
-    <>
-      <h1 className="text-red-500 text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+
+      <BooksPage />
+
+      <Footer />
+    </div>
   );
 }
 
