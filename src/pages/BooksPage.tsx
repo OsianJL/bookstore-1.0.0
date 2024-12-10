@@ -1,14 +1,17 @@
-import BookItem from "../components/BookItem";
-import BookItemStyledComp from "../components/BookItemStyledComp";
+// import BookItem from "../components/BookItem";
+// import BookItemStyledComp from "../components/BookItemStyledComp";
 import BookItemTailwind from "../components/BookItemTailwind";
 
 function BooksPage() {
   return (
-    <div className="flex justify-center gap-5 p-5 grow">
-      <BookItem />
-      <BookItemStyledComp/>
+    <section className="p-5 gap-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {/* <BookItem />
+      <BookItemStyledComp/> */}
       <BookItemTailwind/>
-    </div>
+      <BookItemTailwind/>
+      <BookItemTailwind/>
+      <BookItemTailwind/>
+    </section>
   );
 }
 

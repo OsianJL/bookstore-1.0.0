@@ -7,7 +7,9 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <BooksPage />
+      <main className="w-3/4 max-w-5xl mx-auto my-18 grow">
+        <BooksPage />
+      </main>
 
       <Footer />
     </div>
