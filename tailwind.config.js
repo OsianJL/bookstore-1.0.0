@@ -8,7 +8,10 @@ export default {
     extend: {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif']
-      }
+      },
+      boxShadow: {
+        custom: '5px 5px 10px black',
+      },
     },
   },
   plugins: [],
