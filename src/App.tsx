@@ -1,8 +1,17 @@
+import { ToastContainer } from 'react-toastify';
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import BooksPage from "./pages/BooksPage";
 
+import 'react-toastify/dist/ReactToastify.css';
+
+
 function App() {
+
+
+ 
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -12,6 +21,10 @@ function App() {
       </main>
 
       <Footer />
+
+      <ToastContainer position='bottom-right' autoClose={1000}  />
+
+      
     </div>
   );
 }
