@@ -1,6 +1,7 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu as BurgerMenu } from "react-icons/gi";
 import { useState } from "react";
+import { AnimatePresence } from "motion/react";
 
 import Logo from "./logos/Logo";
 import Menu from "./Menu";
@@ -32,7 +33,9 @@ export default function Header() {
           )}
         </button>
       </header>
-      {isOpenSidebar && <Sidebar setIsOpenSidebar={setIsOpenSidebar} />}
+      <AnimatePresence>
+        {isOpenSidebar && <Sidebar setIsOpenSidebar={setIsOpenSidebar} />}
+      </AnimatePresence>
     </>
   );
 }

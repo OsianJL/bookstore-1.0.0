@@ -1,4 +1,5 @@
 import { AiOutlineClose as CloseMark } from "react-icons/ai";
+import { motion } from "motion/react"
 
 type Props = {
   setIsOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>;
@@ -11,7 +12,18 @@ function Sidebar(props: Props) {
 
   return (
     // <div className="fixed bg-green-300 top-10 h-screen w-full flex justify-center">
-    <div className="fixed bg-green-300 h-screen w-full flex justify-center">
+    <motion.div 
+    className={`fixed bg-green-300 h-screen w-full flex justify-center`}
+    initial={{opacity:0}}
+    animate={{
+      x:["100%", "0%"],
+      opacity:100}}
+    transition={{duration: 1}}
+    exit={{
+      x:["0%", "100%"],
+      opacity:0
+    }}
+    >
       <nav className="font-roboto flex flex-col justify-center gap-4 py-5">
         <button onClick={handleCloseBtn} className="absolute top-5 right-5">
           <CloseMark size={25} color="white" />
@@ -20,7 +32,7 @@ function Sidebar(props: Props) {
         <a href="/books">Books</a>
         <a href="/login">Log In</a>
       </nav>
-    </div>
+    </motion.div>
   );
 }
 
