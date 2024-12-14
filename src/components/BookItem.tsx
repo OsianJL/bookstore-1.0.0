@@ -1,4 +1,5 @@
 import { LuPencilLine as EditIcon, LuTrash2 as DeleteIcon } from "react-icons/lu";
+import { motion, Variants } from 'motion/react'
 
 import handleEditBook from "../helpers/functions/handleEditBook";
 import handleDeleteBook from "../helpers/functions/handleDeleteBook";
@@ -6,16 +7,20 @@ import handleDeleteBook from "../helpers/functions/handleDeleteBook";
 import { Book } from "../config/types";
 interface Props {
   book: Book; 
+  variants: Variants; 
 }
 
 
 
 function BookItem(props: Props) {
 
-const {book} = props
+const {book, variants} = props
 
   return (
-    <article className="border-1 border-black font-roboto shadow-custom">
+    <motion.article 
+    className="border-1 border-black font-roboto shadow-custom"
+    variants={variants}
+    >
       <img
         className="aspect-[16/24] object-cover"
         src={book.photo}
@@ -44,7 +49,7 @@ const {book} = props
           </div>
         </section>
       </section>
-    </article>
+    </motion.article>
   );
 }
 

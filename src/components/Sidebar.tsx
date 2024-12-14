@@ -24,9 +24,9 @@ function Sidebar(props: Props) {
       opacity:0
     }}
     >
-      <nav className="font-roboto flex flex-col justify-center gap-4 py-5">
+      <nav className="font-roboto flex flex-col text-2xl justify-center gap-4 py-5">
         <button onClick={handleCloseBtn} className="absolute top-5 right-5">
-          <CloseMark size={25} color="white" />
+          <CloseMark size={35} color="white" />
         </button>
         <a href="/">Home</a>
         <a href="/books">Books</a>

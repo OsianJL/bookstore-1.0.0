@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import BooksPage from "./pages/BooksPage";
 
 import 'react-toastify/dist/ReactToastify.css';
+// import Animations from './pages/Animations';
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
       <main className="w-3/4 max-w-5xl mx-auto my-18 grow">
         <BooksPage />
       </main>
+
+      {/* <Animations/> */}
 
       <Footer />
 
