@@ -1,9 +1,9 @@
 import BookList from "../components/BookList.tsx";
 
-function BooksPage() {
+function Books() {
   return (
       <BookList />
   )
 }
 
-export default BooksPage;
+export default Books;
