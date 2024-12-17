@@ -1,12 +1,18 @@
 import { Outlet, Navigate } from "react-router-dom"
-// import { toast } from "react-toastify"
+import { toast } from "react-toastify"
 
 function PublicRoutes() {
     // const user = {userName: 'Osian'} 
-    const user = true
+    const user = null
   return (
     <>
-      {!user ? <Outlet/> : <Navigate to="/"/>}
+      {!user ? (
+        <Outlet />
+      ) : (
+        // Mostrar un toast alert cuando no hay usuario
+        (toast.success("Ya estas logueado my friend!"),
+        (<Navigate to="/" />))
+      )}
     </>
   )
 }

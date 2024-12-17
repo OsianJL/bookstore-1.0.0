@@ -9,7 +9,7 @@ import Logo from '../assets/logos/osianjl-logo-black-no_bg.svg?react'
 
 export default function Menu() {
   // const user = {userName: 'Osian'}; 
-  const user = true
+  const user = null
   // const openSidebarClasses = isOpenSidebar ? 'flex-col' : 'hidden'
 
   return (

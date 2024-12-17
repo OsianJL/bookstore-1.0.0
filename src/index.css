@@ -22,3 +22,7 @@
 body {
     font-family: 'YujiMai', sans-serif;
 }
+
+/* input:invalid {
+    outline: 4px solid crimson; 
+} */

@@ -1,16 +1,18 @@
 import { Outlet, Navigate } from "react-router-dom"
-// import { toast } from "react-toastify"
+import { toast } from "react-toastify"
 
 function PrivateRoutes() {
     // const user = {userName: 'Osian'} 
-    const user = true
+    const user = null
   return (
     <>
-      {user ? (
+     {user ? (
         <Outlet />
       ) : (
-        <Navigate to="/login" />)
-      }
+        // Mostrar un toast alert cuando no hay usuario
+        (toast.error("No tienes acceso, ve a loguearte..."),
+        (<Navigate to="/login" />))
+      )}
     </>
   )
 }

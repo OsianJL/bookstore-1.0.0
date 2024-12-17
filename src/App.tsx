@@ -18,8 +18,7 @@ import PublicRoutes from "./components/PublicRoutes";
 function App() {
   return (
     <>
-      <ToastContainer position="bottom-right" autoClose={1000} />
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-slate-200">
         <Header />
 
         <main className="w-3/4 max-w-5xl mx-auto my-18 grow">
@@ -43,6 +42,8 @@ function App() {
 
         <Footer />
       </div>
+      <ToastContainer position="bottom-right" autoClose={3000} />
+
     </>
   );
 }
